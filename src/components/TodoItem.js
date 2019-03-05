@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class TodoItem extends Component {
@@ -32,16 +32,3 @@ TodoItem.propTypes = {
   }
 
 export default TodoItem
-
-//   getStyle = () => {
-//       if(this.props.todo.completed){
-//           return {
-//               textDecoration: 'line-through'
-//           }
-//         }
-//       else{
-//           return{
-//             textDecoration: 'none'
-//           }
-//       }
-//     }

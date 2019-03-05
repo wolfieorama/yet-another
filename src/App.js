@@ -9,7 +9,7 @@ class App extends Component {
         {
             id: 1,
             title: "Take out trash",
-            completed: true
+            completed: false
         },
         {
           id: 2,
@@ -26,7 +26,10 @@ class App extends Component {
 
   toggleComplete = (id) => {
     this.setState({ todos: this.state.todos.map(todo => {
-
+      if (todo.id === id){
+        todo.completed = !todo.completed;
+      }
+      return todo;
     })});
   }
 
