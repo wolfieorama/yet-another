@@ -24,6 +24,7 @@ class App extends Component {
     ]
   }
 
+  // toggleComplete
   toggleComplete = (id) => {
     this.setState({ todos: this.state.todos.map(todo => {
       if (todo.id === id){
@@ -33,10 +34,14 @@ class App extends Component {
     })});
   }
 
+  delTodo = (id) => {
+    this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]});
+  }
+
   render() {
     return (
       <div className="App">
-        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} />
+        <Todos todos={this.state.todos} toggleComplete={this.toggleComplete} delTodo={this.delTodo} />
       </div>
     );
   }
